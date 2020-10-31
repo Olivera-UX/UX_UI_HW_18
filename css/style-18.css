@@ -24,6 +24,10 @@ h1 {
     margin-right: auto;
 }
 
+.titleMain {
+    padding: 20px;
+
+}
 header, footer {
     background-color: #ffffff;
     width: 70%;
@@ -46,11 +50,11 @@ header, footer {
 }
 
 nav ul {
-    font-family: 'Darker Grotesque', sans-serif;
-    font-weight: 400;
     display: flex;
     width: 100%;
     align-items: center;
+    text-decoration: none;
+
 }
 nav li {
     padding: 20px;
@@ -58,6 +62,16 @@ nav li {
 nav title {
     padding: 20px;
 }
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #272727;
+}
+
+a:hover, a:active {
+    color: #18A395;
+}
+
 
 .footer-item {
     padding: 0;
@@ -67,7 +81,6 @@ nav title {
 
 .flexContainer {
     display: flex;
-
     background-color: #E4EFEE;
     margin: 0 auto; 
     justify-content: space-between;
@@ -79,7 +92,6 @@ nav title {
     margin-left: auto;
     margin-right: auto;
     flex-direction: row;
-
 }
 
 .icon {
@@ -101,7 +113,6 @@ nav title {
     margin-right: auto;
     margin-bottom: 0;
     flex-direction: column;
-
 }
 
 .containerWrapper {
@@ -116,10 +127,14 @@ nav title {
 .workGrid {
     display: grid;
     grid-template-columns: 2fr 3fr;   
-    
+    background-color: white;
+    padding: 50px;
+    box-shadow: 0px 0px 25px #A9D6D2;
+    border-radius: 0px 0px 0px 50px;
+    margin-bottom: 50px;
 }
 
-.myArea, img {
+.myArea {
     padding: 20px;
 }
 
@@ -135,9 +150,31 @@ nav title {
     text-align: center;
     display: inline-block;
     color: #ffffff;
-    
 }
 h2 {
     padding-bottom: 50px;
     padding-left: 20px;
+}
+
+/* On screens that are 600px wide or less, 
+make the columns stack on top of each other instead 
+of next to each other */
+@media only screen and (max-width: 600px) {
+    .flexContainer {
+        flex-direction: column;
+        
+    }
+    .flexChild {
+        width: 80%;
+    }
+
+    .workGrid {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        }
+    
+    .containerWrapper {
+        width: 90%;
+        }
 }
